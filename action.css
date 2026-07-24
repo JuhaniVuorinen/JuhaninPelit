@@ -1,0 +1,96 @@
+body { background: #0d080e; }
+
+/* Progress Bar & Headers */
+.progress-bar {
+  background: linear-gradient(90deg, #ff3300, #ffaa00);
+  box-shadow: 0 0 10px #ff3300, 0 0 20px #ffaa00;
+}
+
+.genre-nav a { border-color: #ff3300; }
+.genre-nav a.active,
+.genre-nav a:hover {
+  background: #ff3300;
+  border-color: #ffaa00;
+  color: #fff;
+  box-shadow: 0 0 12px #ff3300;
+}
+
+.main-title {
+  color: #ff3300;
+  text-shadow: 0 0 10px #ff3300, 0 0 20px #cc2200, 0 0 30px #ffaa00;
+}
+
+h1 {
+  color: #ffaa00;
+  text-shadow: 0 0 15px #ff3300, 0 0 30px #cc2200;
+}
+
+/* Atmospheric Fire Ember Effects */
+.fog { background: radial-gradient(circle at center, rgba(255, 51, 0, 0.15), transparent 70%); }
+
+.floating-emoji { animation: emberRise 8s ease-in-out infinite; }
+.floating-emoji:nth-child(1) { left: 10%; animation-delay: 0s; }
+.floating-emoji:nth-child(2) { left: 25%; animation-delay: 2s; }
+.floating-emoji:nth-child(3) { left: 40%; animation-delay: 1s; }
+.floating-emoji:nth-child(4) { left: 55%; animation-delay: 3s; }
+.floating-emoji:nth-child(5) { left: 70%; animation-delay: 0.5s; }
+.floating-emoji:nth-child(6) { left: 85%; animation-delay: 2.5s; }
+
+@keyframes emberRise {
+  0% { transform: translateY(105vh) scale(0.8) rotate(0deg); opacity: 0.2; }
+  50% { opacity: 0.8; filter: drop-shadow(0 0 10px #ff3300); }
+  100% { transform: translateY(-10vh) scale(1.3) rotate(45deg); opacity: 0; }
+}
+
+/* Game Cards & Hover */
+.games::-webkit-scrollbar-thumb { background: #ff3300; border-radius: 4px; }
+
+.game {
+  background: linear-gradient(145deg, #2b0e12, #120507);
+  border: 1px solid #ff3300;
+}
+
+.game:hover {
+  background: #4a151b;
+  border-color: #ffaa00;
+  box-shadow: 0 0 15px #ffaa00;
+  animation: actionPulse 0.4s ease-in-out alternate;
+}
+
+.game::after {
+  content: "⚔️";
+  font-size: 1rem;
+  opacity: 0.6;
+}
+
+@keyframes actionPulse {
+  0% { box-shadow: 0 0 5px #ff3300; }
+  100% { box-shadow: 0 0 25px #ffaa00; }
+}
+
+.covers img {
+  border: 2px solid #ff3300;
+  box-shadow: 0 0 25px rgba(255, 51, 0, 0.4);
+}
+
+.covers img:hover {
+  border-color: #ffaa00;
+  box-shadow: 0 0 40px #ffaa00;
+}
+
+/* Controls */
+.nav {
+  color: #ffaa00;
+  border: 1px solid #ff3300;
+}
+
+.nav:hover {
+  background: #ff3300;
+  box-shadow: 0 0 20px #ffaa00;
+}
+
+.dot { border: 1px solid #ff3300; }
+.dot.active {
+  background: #ff3300;
+  box-shadow: 0 0 12px #ff3300, 0 0 20px #ffaa00;
+}
