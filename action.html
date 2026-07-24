@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Juhanin Pelit - Action & RPG</title>
+  
+  <!-- Separate CSS Stylesheet Links -->
+  <link rel="stylesheet" href="base.css">
+  <link rel="stylesheet" href="action.css">
+</head>
+<body>
+
+  <!-- Top Progress Bar -->
+  <div class="progress-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <!-- Genre Selection Bar -->
+  <div class="genre-nav">
+    <a href="index.html">🏠 KOTI</a>
+    <a href="horror.html">💀 KAUHU</a>
+    <a href="action.html" class="active">⚔️ ACTION & RPG</a>
+    <a href="sports.html">⚽ SPORTS & RACING</a>
+  </div>
+
+  <!-- Atmospheric Overlays -->
+  <div class="scanlines"></div>
+  <div class="glitch-overlay"></div>
+  <div class="spotlight"></div>
+  <div class="fog"></div>
+
+  <!-- Action-Themed Floating Emojis -->
+  <div class="emoji-bg">
+    <div class="floating-emoji">⚔️</div>
+    <div class="floating-emoji">🛡️</div>
+    <div class="floating-emoji">🏹</div>
+    <div class="floating-emoji">🔥</div>
+    <div class="floating-emoji">🐉</div>
+    <div class="floating-emoji">💥</div>
+  </div>
+
+  <!-- Header Title -->
+  <div class="main-title">
+    JUHANIN ACTION & RPG
+    <span>Epic Battles & Adventures</span>
+  </div>
+
+  <!-- Navigation Arrows -->
+  <div class="nav left" id="prevBtn" onclick="prev()">❮</div>
+  <div class="nav right" id="nextBtn" onclick="next()">❯</div>
+
+  <!-- Main Slider Container -->
+  <div class="container" id="slides"></div>
+
+  <!-- Dots Navigation Indicator -->
+  <div class="dots-container" id="dots"></div>
+
+  <!-- Load Action Data & Shared Script -->
+  <script src="data/action-data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
