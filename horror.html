@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Juhanin Pelit - Kauhu</title>
+  
+  <!-- Separate CSS Stylesheet Links -->
+  <link rel="stylesheet" href="base.css">
+  <link rel="stylesheet" href="horror.css">
+</head>
+<body>
+
+  <!-- Top Progress Bar -->
+  <div class="progress-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <!-- Genre Selection Bar -->
+  <div class="genre-nav">
+    <a href="index.html">🏠 KOTI</a>
+    <a href="horror.html" class="active">💀 KAUHU</a>
+    <a href="action.html">⚔️ ACTION & RPG</a>
+    <a href="sports.html">⚽ SPORTS & RACING</a>
+  </div>
+
+  <!-- Atmospheric Overlays -->
+  <div class="scanlines"></div>
+  <div class="glitch-overlay"></div>
+  <div class="spotlight"></div>
+  <div class="blood"></div>
+  <div class="fog"></div>
+
+  <!-- Floating Emojis -->
+  <div class="emoji-bg">
+    <div class="floating-emoji">🎃</div>
+    <div class="floating-emoji">👻</div>
+    <div class="floating-emoji">💀</div>
+    <div class="floating-emoji">🦇</div>
+    <div class="floating-emoji">🕷️</div>
+    <div class="floating-emoji">🔮</div>
+  </div>
+
+  <!-- Hanging Spiders -->
+  <div class="spiders">
+    <div class="spider">🕷️</div>
+    <div class="spider">🕷️</div>
+    <div class="spider">🕷️</div>
+    <div class="spider">🕷️</div>
+  </div>
+
+  <!-- Header Title -->
+  <div class="main-title">
+    JUHANIN KAUHUT
+    <span>Backlog Of Fear</span>
+  </div>
+
+  <!-- Navigation Arrows -->
+  <div class="nav left" id="prevBtn" onclick="prev()">❮</div>
+  <div class="nav right" id="nextBtn" onclick="next()">❯</div>
+
+  <!-- Main Slider Container -->
+  <div class="container" id="slides"></div>
+
+  <!-- Dots Navigation Indicator -->
+  <div class="dots-container" id="dots"></div>
+
+  <!-- Load Horror Data & Shared Script -->
+  <script src="data/horror-data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
