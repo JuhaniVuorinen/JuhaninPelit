@@ -19,7 +19,14 @@ function renderBacklog() {
       <h1>${cat.category}</h1>
       <div class="content">
         <div class="games">
-          ${cat.games.map(game => `<div class="game">${game}</div>`).join('')}
+          ${cat.games.map(game => {
+            // Support object format { name, appId, psUrl } or plain string
+            const name = typeof game === "object" ? game.name : game;
+            const appId = typeof game === "object" ? (game.appId || "") : "";
+            const psUrl = typeof game === "object" ? (game.psUrl || "") : "";
+            
+            return `<div class="game" data-appid="${appId}" data-psurl="${psUrl}">${name}</div>`;
+          }).join('')}
         </div>
         <div class="covers">
           ${cat.covers.map(img => `<img src="${img}" alt="Cover" loading="lazy">`).join('')}
@@ -38,11 +45,23 @@ function renderBacklog() {
     dotsContainer.appendChild(dot);
   });
 
-  // Attach Steam search links to all game cards
+  // Attach Store links to all game cards
   document.querySelectorAll(".game").forEach((gameCard) => {
     gameCard.addEventListener("click", () => {
+      const appId = gameCard.dataset.appid;
+      const psUrl = gameCard.dataset.psurl;
       const gameName = gameCard.innerText.replace("🎃", "").trim();
-      window.open(`https://store.steampowered.com/search/?term=${encodeURIComponent(gameName)}`, "_blank");
+
+      if (appId && appId !== "") {
+        // Direct link to Steam store page
+        window.open(`https://store.steampowered.com/app/${appId}/`, "_blank");
+      } else if (psUrl && psUrl !== "") {
+        // Direct link to PlayStation Store
+        window.open(psUrl, "_blank");
+      } else {
+        // Fallback search if no direct store link is provided
+        window.open(`https://store.steampowered.com/search/?term=${encodeURIComponent(gameName)}`, "_blank");
+      }
     });
   });
 
