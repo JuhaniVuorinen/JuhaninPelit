@@ -13,12 +13,12 @@
     .hub-container {
       position: relative;
       z-index: 10;
-      height: 100vh;
+      min-height: 100vh;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      padding: 20px;
+      padding: 40px 20px;
       box-sizing: border-box;
       text-align: center;
     }
@@ -43,9 +43,9 @@
 
     .genre-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(2, 1fr);
       gap: 30px;
-      max-width: 1000px;
+      max-width: 700px;
       width: 100%;
     }
 
@@ -53,7 +53,7 @@
       background: linear-gradient(145deg, #1d122e, #0d0717);
       border: 2px solid #ff7518;
       border-radius: 16px;
-      padding: 40px 20px;
+      padding: 45px 25px;
       text-decoration: none;
       color: #ebd9ff;
       transition: all 0.4s ease;
@@ -73,7 +73,7 @@
     }
 
     .genre-icon {
-      font-size: 50px;
+      font-size: 52px;
       margin-bottom: 20px;
       transition: transform 0.3s ease;
     }
@@ -96,13 +96,14 @@
       line-height: 1.4;
     }
 
-    @media (max-width: 850px) {
+    /* Responsive Grid Breakpoints */
+    @media (max-width: 650px) {
       .genre-grid {
         grid-template-columns: 1fr;
         gap: 20px;
       }
-      .hub-title { font-size: 28px; }
-      .genre-card { padding: 25px 15px; }
+      .hub-title { font-size: 28px; letter-spacing: 4px; }
+      .genre-card { padding: 30px 20px; }
     }
   </style>
 </head>
@@ -128,18 +129,11 @@
         <p>Tunnelmallista, psykologista ja outoa kauhua.</p>
       </a>
 
-      <!-- Action & RPG Card -->
-      <a href="action.html" class="genre-card">
-        <div class="genre-icon">⚔️</div>
-        <h2>ACTION & RPG</h2>
-        <p>Eepillisiä tarinoita, räiskintää ja roolipelejä.</p>
-      </a>
-
-      <!-- Sports & Racing Card -->
-      <a href="sports.html" class="genre-card">
-        <div class="genre-icon">⚽</div>
-        <h2>SPORTS & RACING</h2>
-        <p>Moottoriurheilua, jalkapalloa ja simulaatiota.</p>
+      <!-- Adventure Card -->
+      <a href="adventure.html" class="genre-card">
+        <div class="genre-icon">🧭</div>
+        <h2>SEIKKAILU</h2>
+        <p>Tutkimusmatkoja, mysteereitä ja tarinankerrontaa.</p>
       </a>
     </div>
   </div>
