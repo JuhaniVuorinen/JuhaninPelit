@@ -23,7 +23,9 @@ const genreData = [
   {
     category: "TARINAVETOISET & DRAAMA",
     covers: [
-      "covers/labyrinthine.jpg"
+      "covers/syberia.jpg",
+      "covers/crimsonmaid.jpg",
+      "covers/BME.jpg"
     ],
     games: [
       { name: "The Crimson Maid", appId: "2695260" },
@@ -37,7 +39,11 @@ const genreData = [
   },
   {
     category: "KÄVELYSIMULAATTORIT",
-    covers: [],
+    covers: [
+      "covers/edengate.jpg",
+      "covers/portrait.jpg",
+      "covers/drizzlepath.jpg"
+    ],
     games: [
       { name: "EDENGATE: The Edge of Life", appId: "1414650" },
       { name: "Drizzlepath: Picturae", appId: "3273990" },
